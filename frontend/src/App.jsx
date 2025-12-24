@@ -30,17 +30,14 @@ export default function App() {
 
         <ScoreCard score={report.overallScore} />
 
-        {/* SUMMARY SECTION */}
         <section className="card">
           <h2 className="section-title">Summary of Scores</h2>
 
           <div className="summary-layout">
-            {/* LEFT: GRAPH */}
             <div className="summary-left">
               <SkillBarChart skills={report.skills} />
             </div>
 
-            {/* RIGHT: SKILL BARS */}
             <div className="summary-right">
               {Object.entries(report.skills).map(([skill, score]) => (
                 <SkillBar key={skill} skill={skill} score={score} />
